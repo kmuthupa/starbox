@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Starbox
+    = favicon_link_tag
+    = stylesheet_link_tag 'application.css', :media => 'screen, projection'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = csrf_meta_tag
+    = javascript_include_tag 'application'
+  %body
+    .wrapper
+      .navbar
+        .navbar-inner
+          .container
+            %a{:class => 'brand', :href => root_url}
+              StarBox
+            .nav-collapse
+      .notice-area
+        / = render 'shared/flashes'
+      .container
+        = yield
+    .footer
+      %hr
+      %h5
+        Copyright &copy; 2013, StarBox

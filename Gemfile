@@ -20,7 +20,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'faker', '0.3.1'
   gem "shoulda-matchers"
-  gem 'mocha', '0.9.10'
 end
 
 group :heroku do

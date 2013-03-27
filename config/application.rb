@@ -44,5 +44,12 @@ module Starbox
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+     # configure haml as the template engine and rspec as the test framework
+    config.generators do |g|
+      g.test_framework :rspec, :spec => true, :fixture => false
+      g.template_engine :haml
+    end
+
   end
 end

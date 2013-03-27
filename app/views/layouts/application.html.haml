@@ -9,18 +9,14 @@
     = csrf_meta_tag
     = javascript_include_tag 'application'
   %body
-    .wrapper
-      .navbar
-        .navbar-inner
-          .container
-            %a{:class => 'brand', :href => root_url}
-              StarBox
-            .nav-collapse
-      .notice-area
-        / = render 'shared/flashes'
-      .container
-        = yield
-    .footer
+    .container
+      .masthead
+        %ul.nav.nav-pills.pull-right
+          %li
+            = link_to('Vend Beverages', root_url)
+          %li
+            = link_to('Admin', root_url)
+          %li
+            = link_to('Help', root_url)
+        %h3.muted StarBox
       %hr
-      %h5
-        Copyright &copy; 2013, StarBox

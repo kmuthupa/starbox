@@ -5,15 +5,15 @@ RecipeIngredient.destroy_all
 Beverage.destroy_all
 
 # Create ingredients
-cocoa = Ingredient.create({:name => 'Cocoa', :price => 0.9, :units => 25})
-coffee = Ingredient.create({:name => 'Coffee', :price => 0.75, :units => 25})
-cream = Ingredient.create({:name => 'Cream', :price => 0.25, :units => 25})
-decaf_coffee = Ingredient.create({:name => 'Decaf Coffee', :price => 0.75, :units => 25})
-espresso = Ingredient.create({:name => 'Espresso', :price => 1.1, :units => 25})
-foamed_milk = Ingredient.create({:name => 'Foamed Milk', :price => 0.35, :units => 25})
-steamed_milk = Ingredient.create({:name => 'Steamed Milk', :price => 0.35, :units => 25})
-sugar = Ingredient.create({:name => 'Sugar', :price => 0.25, :units => 25})
-whipped_cream = Ingredient.create({:name => 'Whipped Cream', :price => 1.0, :units => 25})
+cocoa = Ingredient.create({:name => 'Cocoa', :price => 0.9, :units => MAX_INVENTORY})
+coffee = Ingredient.create({:name => 'Coffee', :price => 0.75, :units => MAX_INVENTORY})
+cream = Ingredient.create({:name => 'Cream', :price => 0.MAX_INVENTORY, :units => MAX_INVENTORY})
+decaf_coffee = Ingredient.create({:name => 'Decaf Coffee', :price => 0.75, :units => MAX_INVENTORY})
+espresso = Ingredient.create({:name => 'Espresso', :price => 1.1, :units => MAX_INVENTORY})
+foamed_milk = Ingredient.create({:name => 'Foamed Milk', :price => 0.35, :units => MAX_INVENTORY})
+steamed_milk = Ingredient.create({:name => 'Steamed Milk', :price => 0.35, :units => MAX_INVENTORY})
+sugar = Ingredient.create({:name => 'Sugar', :price => 0.MAX_INVENTORY, :units => MAX_INVENTORY})
+whipped_cream = Ingredient.create({:name => 'Whipped Cream', :price => 1.0, :units => MAX_INVENTORY})
 
 # Create recipes
 recipe1 = Recipe.create

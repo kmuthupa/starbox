@@ -6,7 +6,7 @@ class IngredientsController < ApplicationController
 
   def restock
     @ingredients.each {|ingredient| ingredient.restock}
-    flash[:notice] = 'Inventory stock successfully restocked!'
+    flash.now[:notice] = 'Inventory successfully restocked!'
     render :action => :index
   end
 

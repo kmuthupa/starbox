@@ -24,7 +24,7 @@ describe IngredientsController do
       post :restock
       response.should be_success
       response.should render_template(:index)
-      flash[:notice].should == 'Inventory stock successfully restocked!'
+      flash[:notice].should == 'Inventory successfully restocked!'
       ingredients = assigns(:ingredients)
       ingredients.size.should == 3
       ingredients.each {|i| i.units.should == MAX_INVENTORY}

@@ -20,6 +20,8 @@
             = link_to('Help', root_url)
         %h2.muted StarBox
       %hr
+      .alerts
+        = render :partial => 'shared/flashes'
       .jumbotron
         = yield
       %hr

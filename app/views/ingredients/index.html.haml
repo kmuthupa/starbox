@@ -13,4 +13,4 @@
       %td.qty
         %h4= ingredient.units
 .action_div
-  = link_to('RESTOCK', root_url, :class => 'btn btn-large btn-success') 
+  = link_to('RESTOCK', restock_ingredients_url, :method => :post, :class => 'btn btn-large btn-success') 

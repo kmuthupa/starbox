@@ -5,5 +5,7 @@
     %tr.menu_row
       %td.name 
         %h3= beverage.name
+      %td.price
+        %h3= formatted_price(beverage.price)
       %td.selection
         = link_to('MAKE SELECTION', root_url, :class => 'btn btn-large btn-success') 

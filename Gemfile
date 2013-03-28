@@ -6,6 +6,7 @@ gem 'haml'
 gem 'heroku'
 gem 'thin'
 gem 'mysql2'
+gem "rspec-rails", "~> 2.4"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,7 +20,6 @@ group :assets do
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.4"
   gem 'factory_girl_rails'
   gem "shoulda-matchers"
 end

@@ -51,7 +51,6 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    faker (0.3.1)
     haml (4.0.1)
       tilt
     heroku (2.35.0)
@@ -166,7 +165,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails
   factory_girl_rails
-  faker (= 0.3.1)
   haml
   heroku
   jquery-rails

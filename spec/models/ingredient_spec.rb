@@ -11,6 +11,17 @@ describe Ingredient do
     @ingredient = FactoryGirl.create(:ingredient)
   end
 
+  describe "#available" do
+    it 'should be available' do
+      @ingredient.available?(10).should be_true
+    end
+
+    it 'should not be available' do
+      @ingredient.use(MAX_INVENTORY)
+      @ingredient.available?(10).should be_false
+    end
+  end
+
   describe "#use" do
    it 'should use 5 units' do
      @ingredient.units.should == MAX_INVENTORY

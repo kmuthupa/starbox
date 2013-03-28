@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(:version => 20130327203329) do
 
   create_table "beverages", :force => true do |t|
     t.string   "name"
-    t.integer  "recipe_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -2,10 +2,14 @@
 %p.lead Please make a selection from the beverage menu below:
 %table.beverage_menu
   - @beverages.each do |beverage|
-    %tr.menu_row{:id => beverage.id}
+    %tr.menu_row
       %td.name
         %h3= beverage.name
       %td.price
         %h3= formatted_price(beverage.price)
       %td.selection
-        = link_to('MAKE SELECTION', root_url, :class => 'btn btn-large btn-success') 
+        = link_to('MAKE SELECTION', 'javascript: return false;', :class => 'btn btn-large btn-success select-beverage', :url => vend_beverage_url(beverage))
+#process_modal{:class => 'modal'}
+  %h3 Please wait...
+  = image_tag('working.gif', :size=>'50x50')
+.vend_result{:class => 'alert alert-success'}

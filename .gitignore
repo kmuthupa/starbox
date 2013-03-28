@@ -5,3 +5,5 @@ tmp/
 .sass-cache/
 .rspec
 public/assets/
+.DS_Store
+app/.DS_Store

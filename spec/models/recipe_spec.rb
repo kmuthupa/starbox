@@ -26,4 +26,12 @@ describe Recipe do
       @recipe.available?.should be_false
     end
   end
+
+  describe "#make" do
+    it 'should make with success' do
+      @recipe.make
+      @recipe.recipe_ingredients.first.ingredient.units.should == 23
+      @recipe.recipe_ingredients.last.ingredient.units.should == 23
+    end
+  end
 end

@@ -5,4 +5,8 @@ class Beverage < ActiveRecord::Base
 
   delegate :price, :to => :recipe
   delegate :available?, :to => :recipe
+
+  def vend
+    available? ? recipe.make : false
+  end
 end

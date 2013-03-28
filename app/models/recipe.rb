@@ -13,4 +13,10 @@ class Recipe < ActiveRecord::Base
     end
     true
   end
+
+  def make
+    self.recipe_ingredients.each do |r|
+      r.ingredient.use(r.units)
+    end
+  end
 end

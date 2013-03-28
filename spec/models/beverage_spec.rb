@@ -36,6 +36,20 @@ describe Beverage do
   end
 
   describe "#vend" do
+    it 'should vend with success when inventory is available' do
+      @beverage.vend.should be_true
+      @beverage.reload
+      @beverage.recipe.recipe_ingredients.first.ingredient.units.should == 23
+      @beverage.recipe.recipe_ingredients.last.ingredient.units.should == 23
+    end
 
+    it 'should fail to vend with success when inventory is not available' do
+      @recipe.recipe_ingredients.first.ingredient.use(MAX_INVENTORY - 1)
+      @recipe.recipe_ingredients.last.ingredient.use(MAX_INVENTORY - 1)
+      @recipe.reload
+      @beverage.reload
+      @beverage.available?.should be_false
+      @beverage.vend.should be_false
+    end
   end
 end

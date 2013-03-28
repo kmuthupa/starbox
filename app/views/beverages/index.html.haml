@@ -2,8 +2,8 @@
 %p.lead Please make a selection from the beverage menu below:
 %table.beverage_menu
   - @beverages.each do |beverage|
-    %tr.menu_row
-      %td.name 
+    %tr.menu_row{:id => beverage.id}
+      %td.name
         %h3= beverage.name
       %td.price
         %h3= formatted_price(beverage.price)

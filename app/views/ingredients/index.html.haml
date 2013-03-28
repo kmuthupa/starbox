@@ -1,0 +1,16 @@
+%h2 Current StarBox Inventory
+%p.lead Hit the button below to restock ingredients inventory:
+%table.ingredient_list
+  %tr.row
+    %th 
+      %h3 Ingredient
+    %th 
+      %h3 Units on Hand
+  - @ingredients.each do |ingredient|
+    %tr.row
+      %td.name 
+        %h4= ingredient.name
+      %td.qty
+        %h4= ingredient.units
+.action_div
+  = link_to('RESTOCK', root_url, :class => 'btn btn-large btn-success') 

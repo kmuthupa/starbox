@@ -1,0 +1,9 @@
+%h1 Welcome to Starbox
+%p.lead Please make a selection from the beverage menu below:
+%table.beverage_menu
+  - @beverages.each do |beverage|
+    %tr.menu_row
+      %td.name 
+        %h3= beverage.name
+      %td.selection
+        = link_to('MAKE SELECTION', root_url, :class => 'btn btn-large btn-success') 

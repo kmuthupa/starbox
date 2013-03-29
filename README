@@ -1,0 +1,10 @@
+This solution for the starbox problem uses the following tools:
+
+1. Rails 3.12.13
+2. Ruby 1.9.3
+3. jQuery
+4. SASS
+5. Rspec
+6. Factory Girl
+
+The specs for the solution are provided by Rspec. 

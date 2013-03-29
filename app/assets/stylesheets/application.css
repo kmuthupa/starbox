@@ -9,7 +9,9 @@
 .footer {
   text-align: center;
 }
-
 .alerts {
   margin: 10px;
+}
+.alert {
+  font-size: 120%;
 }

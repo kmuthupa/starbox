@@ -8,7 +8,7 @@
       %td.price
         %h3= formatted_price(beverage.price)
       %td.selection
-        = link_to('MAKE SELECTION', 'javascript: return false;', :class => 'btn btn-large btn-success select-beverage', :url => vend_beverage_url(beverage))
+        = link_to('MAKE SELECTION', 'javascript:void(0)', :class => 'btn btn-large btn-success select-beverage', :url => vend_beverage_url(beverage))
 #process_modal{:class => 'modal'}
   %h3 Please wait...
   = image_tag('working.gif', :size=>'50x50')
